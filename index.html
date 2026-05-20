@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貪食蛇遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐍 貪食蛇遊戲</h1>
+        <div class="game-info">
+            <div class="score-board">
+                <span>分數: <strong id="score">0</strong></span>
+                <span>最高分: <strong id="highScore">0</strong></span>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="fruits-eaten">
+            <p><strong>已吃過的水果:</strong></p>
+            <div id="fruitsEatenList" class="fruits-list"></div>
+        </div>
+        <div class="game-status" id="gameStatus" style="display: none;">
+            <div class="game-over-text">遊戲結束</div>
+        </div>
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">開始遊戲</button>
+            <button id="pauseBtn" class="btn btn-secondary" disabled>暫停</button>
+            <button id="resetBtn" class="btn btn-danger">重新開始</button>
+        </div>
+        <div class="instructions">
+            <p><strong>操作方式：</strong>使用 ↑ ↓ ← → 或 WASD 控制蛇的方向</p>
+            <p><strong>目標：</strong>吃掉紅色食物，蛇會變長。不要碰到牆壁和自己的身體！</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
